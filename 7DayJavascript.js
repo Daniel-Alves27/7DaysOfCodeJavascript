@@ -88,14 +88,13 @@ for(let i = 0; i < 3; i+=1){
         alert(`Parabéns!Você acertou.`); 
         break;
     }
-    else if(errouNumero == 3){
-        alert(`Que pena você errou.O número era ${numeroAleatorio}`)
-    }
-    else(numeroAleatorio !== adivinharValor);{
+    if(numeroAleatorio !== adivinharValor){
         errouNumero += 1;
         //console.log(errouNumero)
         alert("tente novamente")
     }
-
+    if(errouNumero == 3){
+        alert(`Que pena você errou.O número era ${numeroAleatorio}`)
+    }
 }
 
