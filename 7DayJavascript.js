@@ -82,7 +82,7 @@ let errouNumero = 0;
 
 console.log(numeroAleatorio)
 for(let i = 0; i < 3; i+=1){
-    adivinharValor = prompt("Qual o valor que você deseja chutar?");
+    adivinharValor = prompt("Tente adivinhar o número de 0 a 10:");
     //console.log(i);
     if(numeroAleatorio == adivinharValor){
         alert(`Parabéns!Você acertou.`); 
@@ -96,6 +96,6 @@ for(let i = 0; i < 3; i+=1){
         //console.log(errouNumero)
         alert("tente novamente")
     }
-    
+
 }
 
