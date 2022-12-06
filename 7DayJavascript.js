@@ -76,7 +76,7 @@ while (msg === "ok"){
 //_________________________________________
 
 //Desafio #04
-
+/*
 let numeroAleatorio = Math.floor(Math.random()*11);
 let errouNumero = 0;
 
@@ -97,4 +97,49 @@ for(let i = 0; i < 3; i+=1){
         alert(`Que pena você errou.O número era ${numeroAleatorio}`)
     }
 }
+*/
 
+//_________________________________________
+
+//Desafio #05
+
+//categoria
+let frutas = ["laranja"];
+let laticinios = ["queijo"];
+let legumes = ["cenoura"];
+let doces = ["bolacha"];
+
+let inserirComida = "";
+let opcaoCategoria = "";
+
+let opcaoAdicionar = "sim";
+
+while(opcaoAdicionar == "sim"){
+    
+    opcaoAdicionar = prompt("Você deseja adicionar uma comida na sua lista de compras?");
+
+    if(opcaoAdicionar != "sim"){
+        break;
+    };
+
+    inserirComida = prompt("qual comida você deseja inserir");
+    //alert(`${inserirComida}`);
+    opcaoCategoria = prompt("Em qual categoria você degeja inseri seu alimento.Digite 1 para frutas,2 para laticínios,3 para legumes ou 4 para doces.");
+
+
+    if(opcaoCategoria == 1){
+        frutas.push(inserirComida);
+    }else if(opcaoCategoria == 2){
+        laticinios.push(inserirComida);
+    }else if(opcaoCategoria == 3){
+        legumes.push(inserirComida);
+    }else if(opcaoCategoria == 4){
+        doces.push(inserirComida);
+    }else{
+    alert("categoria não definida");
+    };
+
+    
+};
+
+alert(`Lista de Compras:\n Frutas: ${frutas} \n Laticínios: ${laticinios} \n Legumes: ${legumes} \n Doces: ${doces} `);
