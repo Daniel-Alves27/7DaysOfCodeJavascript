@@ -144,7 +144,7 @@ while(opcaoAdicionar == "sim"){
 
 alert(`Lista de Compras:\n Frutas: ${frutas} \n Laticínios: ${laticinios} \n Legumes: ${legumes} \n Doces: ${doces} `);
 */
-
+/*
 //_________________________________________
 
 //Desafio #06
@@ -232,4 +232,65 @@ while(removerComida == "sim"){
     };
     
     alert(`Lista de Compras:\n Frutas: ${frutas} \n Laticínios: ${laticinios} \n Legumes: ${legumes} \n Doces: ${doces} `);
+};
+*/
+
+//_________________________________________
+
+//Desafio #07
+
+let iniciarCalculadora = prompt("Digite 'ligar' para iniciar calculador");
+let opcoes = "";
+
+let operacoes = {
+    soma:"",
+    subtracao:"",
+    multiplicacao:"",
+    divisao:""
+};
+
+while (iniciarCalculadora == "ligar"){
+
+    opcoes = prompt("Digite: soma, subtracao, multiplicacao ,divisao ou desligar ");
+    
+    if(opcoes == "desligar"){
+        break;
+    };
+
+    switch(opcoes) {
+        case "soma":
+            operacoes.soma = somar(parseFloat(prompt("Digite o primeiro valor")),parseFloat(prompt("Digite o segundo valor")));
+
+            function somar(primeiroValor = required(),segundoValor = required()){
+            alert(primeiroValor + segundoValor);
+            };
+            break;
+
+        case "subtracao":
+            operacoes.subtracao = subtrair(parseFloat(prompt("Digite o primeiro valor")),parseFloat(prompt("Digite o segundo valor")));
+
+            function subtrair(primeiroValor = required(),segundoValor = required()){
+            alert(primeiroValor - segundoValor);
+            };
+            break;
+
+        case "multiplicacao":
+            operacoes.multiplicacao = multiplicar(parseFloat(prompt("Digite o primeiro valor")),parseFloat(prompt("Digite o segundo valor")));
+
+            function multiplicar(primeiroValor = required(),segundoValor = required()){
+            alert(primeiroValor * segundoValor);
+            };
+            break;
+
+        case "divisao":
+            operacoes.divisao = divisao(parseFloat(prompt("Digite o primeiro valor")),parseFloat(prompt("Digite o segundo valor")));
+
+            function divisao(primeiroValor = required(),segundoValor = required()){
+            alert(primeiroValor / segundoValor);
+            };
+            break;
+
+        default:
+            alert("opcão invalida! Tente novamente.")
+    };
 };
